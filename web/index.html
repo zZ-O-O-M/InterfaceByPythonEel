@@ -13,12 +13,109 @@
 </head>
 <body>
 
-<input id="location" type="text" class="location" placeholder="Enter city name" value="10">
-<button id="button-show" class="button-show">Вычислить</button>
+<h1 class="page-title"> Журнал учёта столовой посуды и приборов</h1>
 
-<input class="location result" type="text" id="result">
+<form class="accounting-form" action="">
 
-<script src="action.js"></script>
+  <!--Основная информация-->
+
+  <div class="form-item org-item">
+    <label for="org-name">Наименование организации</label>
+    <input type="text" id="org-name" name="orgName" class="form-input">
+  </div>
+
+  <div class="form-item division-item">
+    <label for="division-name">Структуроное подразделение</label>
+    <input type="text" id="division-name" name="divisionName" class="form-input">
+  </div>
+
+  <div class="form-item period-item">
+    <label for="period">Период учёта</label>
+    <input type="text" id="period" name="period" class="form-input">
+  </div>
+
+  <!-- Информация об ответственном лице-->
+  <div class="form-block responsible-person-block">
+    <h2 class="form-block__title">Отвественное лицо</h2>
+
+    <div class="form-item person-post-item">
+      <label for="responsible-person-post">Должность</label>
+      <input type="text" id="responsible-person-post" name="responsiblePersonPost" class="form-input">
+    </div>
+
+    <div class="form-item person-name-item">
+      <label for="responsible-person-name">ФИО</label>
+      <input type="text" id="responsible-person-name" name="responsiblePersonName" class="form-input">
+    </div>
+
+    <div class="form-item person-dob-item">
+      <label for="responsible-person-dob">Дата рождения</label>
+      <input type="text" id="responsible-person-dob" name="responsiblePersonDob" class="form-input">
+    </div>
+  </div>
+
+  <!-- Информация о единице посуды/прибора-->
+  <div class="form-block data-info-block data-info">
+    <div class="data-info__dish dish">
+      <h2 class="form-item-title dish__title">Посуда/прибор</h2>
+      <div class="dish__name ">
+        <label for="dish-name">Наименование</label>
+        <input type="text" name="" id="dish-name" class="dish-name">
+      </div>
+      <div class="dish__code">
+        <label for="dish-code">Код</label>
+        <input type="text" name="DishCode" id="dish-code" class="dish-code">
+      </div>
+    </div>
+    <div class="data-info__meas-unit meas-unit">
+      <h2 class="form-item-title meas-unit__title">Единица измерения</h2>
+      <div class="meas-unit__name ">
+        <label for="meas-unit-name">Наименование</label>
+        <input type="text" name="measUnitName" id="meas-unit-name" class="dish-name">
+      </div>
+      <div class="meas-unit__code">
+        <label for="meas-unit-code">Код</label>
+        <input type="text" name="measUnitCode" id="meas-unit-code" class="dish-code">
+      </div>
+    </div>
+  </div>
+
+  <!-- Отчётность сотрудника-->
+  <div class="form-block emp-block">
+    <div class="form-item emp-item emp">
+      <h2 class="form-item-title emp">Данные сотрудника</h2>
+
+      <div class="emp__received">
+        <label for="received-by-emp-1">Получено</label>
+        <input type="text" name="receivedByEmp1" id="received-by-emp-1" class="emp-received">
+      </div>
+
+      <div class="emp__returned">
+        <label for="returned-by-emp-1">Возвращено</label>
+        <input type="text" name="returnedByEmp1" id="returned-by-emp-1" class="emp-returned">
+      </div>
+
+      <div class="emp__crashed">
+        <label for="crashed-by-emp-1">Бой/лом</label>
+        <input type="text" name="crashedByEmp1" id="crashed-by-emp-1" class="emp-crashed">
+      </div>
+
+      <div class="emp__shortfall">
+        <label for="shortfall-by-emp-1">Недостача</label>
+        <input type="text" name="shortfallByEmp1" id="shortfall-by-emp-1" class="emp-shortfall">
+      </div>
+      
+    </div>
+  </div>
+</form>
+
+
+<!--<input id="location" type="text" class="location" placeholder="Enter city name" value="10">-->
+<!--<button id="button-show" class="button-show">Вычислить</button>-->
+
+<!--<input class="location result" type="text" id="result">-->
+
+<!--<script src="action.js"></script>-->
 
 </body>
 </html>
