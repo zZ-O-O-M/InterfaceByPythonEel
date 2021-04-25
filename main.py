@@ -7,4 +7,4 @@ def get_value(res):
 
 
 eel.init("web")
-eel.start("index.html", size = (500, 400))
+eel.start("index.html", size = (500, 500))
